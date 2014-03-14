@@ -2,14 +2,14 @@
 	 * main.cpp
 	 *
 	 *  Created on: 14 Mar 2014
-	 *      Author: rajru_000
+	 *      Author: Raj Shah 120695027
 	 */
 
-	//#include <stream>
+	//#include <stream>, iostream
 	#include <iostream>
 
-	float function1(double a, double b);
-	float function2(double a, double b); //missing semicolon
+	float largestValue(double a, double b);
+	float smallestValue(double a, double b); //missing semicolon, required to end the command
 
 	int main() {
 		double x=0;
@@ -19,10 +19,11 @@
 		std::cout << std::endl;
 		std::cout << "Enter another number:";
 		std::cin >> y;
-	std::cout << function2(x,y) << " " << function1(x,y) << std::endl; //brackets
-} //did not close int main
+		//std::cout << function2(x,y) << " " << function1(x,y) << std::endl; //incorrect square brackets,
+		std::cout << smallestValue(x,y) << " " << largestValue(x,y) << std::endl;
+} //did not close int main,
 
-float function1(double a, double b) {
+float largestValue(double a, double b) {
 	if( a > b) {
 		return a;
 	} else {
@@ -30,7 +31,7 @@ float function1(double a, double b) {
 	}
 }
 
-float function2(double a, double b) { //float
+float smallestValue(double a, double b) { //float, as defined before and to fix the memory it needs
 	if( a < b) {
 		return a;
 	} else {
