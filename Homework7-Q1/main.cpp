@@ -5,7 +5,7 @@
 	 *      Author: Raj Shah 120695027
 	 */
 
-	//#include <stream>, iostream
+	//#include <stream>, stream is not a header file
 	#include <iostream>
 
 	float largestValue(double a, double b);
@@ -19,9 +19,9 @@
 		std::cout << std::endl;
 		std::cout << "Enter another number:";
 		std::cin >> y;
-		//std::cout << function2(x,y) << " " << function1(x,y) << std::endl; //incorrect square brackets,
+		//std::cout << function2(x,y) << " " << function1(x,y) << std::endl; //incorrect square brackets, require () for functions
 		std::cout << smallestValue(x,y) << " " << largestValue(x,y) << std::endl;
-} //did not close int main,
+} //did not close int main, bracket required to end main function
 
 float largestValue(double a, double b) {
 	if( a > b) {
@@ -31,7 +31,7 @@ float largestValue(double a, double b) {
 	}
 }
 
-float smallestValue(double a, double b) { //float, as defined before and to fix the memory it needs
+float smallestValue(double a, double b) { //float, double has a larger memory allocation
 	if( a < b) {
 		return a;
 	} else {
